@@ -74,7 +74,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => '',
-		'database' => 'generator_name',
+		'database' => 'generator_cake',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);
