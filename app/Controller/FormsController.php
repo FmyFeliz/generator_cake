@@ -8,6 +8,7 @@ App::uses('AppController', 'Controller');
  * @property SessionComponent $Session
  */
 class FormsController extends AppController {
+	public $helpers = array('Html','Form');
 
 /**
  * Components
@@ -105,5 +106,25 @@ class FormsController extends AppController {
 			$this->Session->setFlash(__('The form could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
+	}
+
+	public function top($id = 1){
+		if (!$this->Form->exists($id)) {
+			throw new NotFoundException(__('Invalid form'));
+		}
+		$options = array('conditions' => array('Form.' . $this->Form->primaryKey => $id));
+		$this->set('form', $this->Form->find('first', $options));
+
+		if ($this->request->is('post')) {
+			$this->Form->create();
+			if ($this->Form->save($this->request->data)) {
+				$this->Session->setFlash(__('The form has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The form could not be saved. Please, try again.'));
+			}
+		}
+		$images = $this->Form->Image->find('list');
+		$this->set(compact('images'));
 	}
 }
