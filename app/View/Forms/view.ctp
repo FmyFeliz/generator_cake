@@ -26,6 +26,11 @@
 			<?php echo $this->Html->link($form['Image']['name'], array('controller' => 'images', 'action' => 'view', $form['Image']['id'])); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Create Img Url'); ?></dt>
+		<dd>
+			<?php echo h($form['Form']['create_img_url']); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">

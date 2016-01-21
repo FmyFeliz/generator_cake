@@ -14,8 +14,9 @@ class FormFixture extends CakeTestFixture {
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
 		'created' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => false, 'default' => null),
-		'text' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 64, 'collate' => 'utf8mb4_general_ci', 'charset' => 'utf8mb4'),
+		'text' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 36, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'image_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
+		'create_img_url' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 64, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -30,10 +31,11 @@ class FormFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'id' => 1,
-			'created' => '2016-01-20 12:12:51',
-			'modified' => '2016-01-20 12:12:51',
+			'created' => '2016-01-21 11:27:19',
+			'modified' => '2016-01-21 11:27:19',
 			'text' => 'Lorem ipsum dolor sit amet',
-			'image_id' => 1
+			'image_id' => 1,
+			'create_img_url' => 'Lorem ipsum dolor sit amet'
 		),
 	);
 

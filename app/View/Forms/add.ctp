@@ -5,6 +5,7 @@
 	<?php
 		echo $this->Form->input('text');
 		echo $this->Form->input('image_id');
+		echo $this->Form->input('create_img_url');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

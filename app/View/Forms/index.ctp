@@ -8,6 +8,7 @@
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th><?php echo $this->Paginator->sort('text'); ?></th>
 			<th><?php echo $this->Paginator->sort('image_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('create_img_url'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -21,6 +22,7 @@
 		<td>
 			<?php echo $this->Html->link($form['Image']['name'], array('controller' => 'images', 'action' => 'view', $form['Image']['id'])); ?>
 		</td>
+		<td><?php echo h($form['Form']['create_img_url']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $form['Form']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $form['Form']['id'])); ?>
