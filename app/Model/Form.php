@@ -3,6 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * Form Model
  *
+ * @property Image $Image
  */
 class Form extends AppModel {
 
@@ -11,7 +12,7 @@ class Form extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'image_id';
+	public $displayField = 'text';
 
 /**
  * Validation rules
@@ -50,4 +51,22 @@ class Form extends AppModel {
 			),
 		),
 	);
+
+//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+*/
+	public $belongsTo = array(
+				'Image' => array(
+						-			'className' => 'Image',
+						-			'foreignKey' => 'image_id',
+						-			'conditions' => '',
+						-			'fields' => '',
+						-			'order' => ''
+										)
+					);
+
 }
