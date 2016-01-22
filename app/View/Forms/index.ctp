@@ -23,6 +23,13 @@
 			<?php echo $this->Html->link($form['Image']['name'], array('controller' => 'images', 'action' => 'view', $form['Image']['id'])); ?>
 		</td>
 		<td><?php echo h($form['Form']['create_img_url']); ?>&nbsp;</td>
+		<td><?php echo
+			<script type="text/javascript">
+				<select>
+					<o
+				</select>
+  			var a = <?php echo $a; ?>;
+			</script>?></td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $form['Form']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $form['Form']['id'])); ?>
