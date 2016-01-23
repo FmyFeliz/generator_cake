@@ -28,7 +28,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('koumeistyle');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -38,26 +38,44 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<ul>
+				<li id="li1"><h1>諸葛亮ジェネレータ</h1></li>
+				<li><h2>～諸葛亮　いわく、～</h2></li>
+			</ul>
 		</div>
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
+
+			<div id="after">
+				<fieldset id="ichiran">
+					<legend><h3>今までの作品紹介</h3></legend>
+					<table >
+						<tr>
+							<td class="normal">
+								<a href="https://www.google.co.jp/search?q=三国志Ⅲ" target="_blank"><?php echo $this->Html->image( "1.png"); ?></a>
+							</td>
+							<td class="normal">
+								<a href="https://www.google.co.jp/search?q=三国志Ⅳ" target="_blank"><?php echo $this->Html->image( "2.png"); ?></a>
+							</td>
+						</tr>
+						<tr>
+							<td class="normal">
+								<a href="https://www.google.co.jp/search?q=三国志Ⅷ" target="_blank"><?php echo $this->Html->image( "3.png"); ?></a>
+							</td>
+							<td class="normal">
+								<a href="https://www.google.co.jp/search?q=三国志Ⅹ" target="_blank"><?php echo $this->Html->image( "4.png"); ?></a>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+				<a href="">セリフ一覧</a>
+			</div>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<div id="footer">
+	</div>
 </body>
 </html>
